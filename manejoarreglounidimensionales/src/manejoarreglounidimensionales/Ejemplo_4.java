@@ -41,9 +41,9 @@ public class Ejemplo_4 {
                 bandera = false;
             }
         }
-        reporteFinal = String.format("%sReporte de preferencias de películas\n", reporteFinal);
+        reporteFinal = String.format("%s----------Reporte de preferencias de películas-----------\n", reporteFinal);
         for (int i = 0; i < t_peliculas.length; i++) {
-            reporteFinal = String.format("%s %s : %s\n",
+            reporteFinal = String.format("%s %s : *\n",
                     reporteFinal, categorias[i], t_peliculas[i]);
         }
         System.out.printf("%s\n", reporteFinal);

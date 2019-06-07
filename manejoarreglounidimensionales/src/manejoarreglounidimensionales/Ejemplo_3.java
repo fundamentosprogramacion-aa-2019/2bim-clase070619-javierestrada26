@@ -37,6 +37,9 @@ public class Ejemplo_3 {
                 case 'u':
                     contador[4] = contador[4] + 1;
                     break;
+                default:
+                    System.out.println("Opción no valida");
+                    break;
             }
             System.out.println("Desea salir del ciclo, ingrese el número 0");
             seguir = entrada.nextInt();
