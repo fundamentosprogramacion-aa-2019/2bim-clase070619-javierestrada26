@@ -6,12 +6,14 @@ public class Ejemplo_4 {
 
     public static void main(String[] args) {
         Scanner entrada = new Scanner(System.in);
+        //declaracion de variables
         String[] categorias = {"Comedia", "Terror", "Drama", "Familiar"};
-        double[] t_peliculas = new double[4];
+        int[] t_peliculas = new int[4];
         int peli = 0;
         boolean bandera = true;
         int seguir;
         String reporteFinal = "";
+        //empieza el ciclo
         while (bandera == true) {
             System.out.println("Ingrese la categoría de pelicula"
                     + " de su preferencia");
@@ -35,17 +37,28 @@ public class Ejemplo_4 {
                     }
                 }
             }
+            //pregunta si quiere seguir
             System.out.println("Desea salir del ciclo, ingrese el número 0");
             seguir = entrada.nextInt();
             if (seguir == 0) {
                 bandera = false;
             }
         }
-        reporteFinal = String.format("%s----------Reporte de preferencias de películas-----------\n", reporteFinal);
+        reporteFinal = String.format("%s----------Reporte de preferencias de"
+                + " películas-----------\n", reporteFinal);
+        //cambio de numero a asterisco
         for (int i = 0; i < t_peliculas.length; i++) {
-            reporteFinal = String.format("%s %s : *\n",
-                    reporteFinal, categorias[i], t_peliculas[i]);
+            int j = t_peliculas[i];
+            String cambio = "";
+            for (int g = 0; g < j; g++) {
+                cambio = String.format("%s*", cambio);
+
+            }
+            reporteFinal = String.format("%s %s %s \n ",
+                    reporteFinal, categorias[i], cambio);
         }
+
         System.out.printf("%s\n", reporteFinal);
+
     }
 }
